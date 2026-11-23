@@ -3,19 +3,22 @@ plugins {
 }
 
 android {
-    namespace = "com.example.sicam_appdev"
+    namespace = "com.example.sicamandroid"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.sicam_appdev"
+        applicationId = "com.example.sicamandroid"
         minSdk = 25
         targetSdk = 37
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
