@@ -1,54 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/tvAppTitle"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CompLab1"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/tvLifecycleLog"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:background="#F4F6F9"
-        android:padding="12dp"
-        android:text="Lifecycle trace ready..."
-        android:textSize="13sp"
-        app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
-        app:layout_constraintBottom_toTopOf="@id/btnClearLog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CompLab 2 - Workstation Readiness"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
 
-    <Button
-        android:id="@+id/btnClearLog"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Clear Log"
-        app:layout_constraintBottom_toTopOf="@id/btnSimulateTick"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvStationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PC-07 - Android Studio SDK"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnSimulateTick"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="Log Check-In Heartbeat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/tvStationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Needs Check"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvStationSpec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: Emulator slow to boot"
+            android:textSize="14sp"
+            android:layout_marginTop="6dp" />
+
+        <Button
+            android:id="@+id/btnSwitchStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Switch Station" />
+
+        <Button
+            android:id="@+id/btnInspectStation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inspect" />
+
+        <Button
+            android:id="@+id/btnShareReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Status" />
+
+        <Button
+            android:id="@+id/btnQuickSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Support" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Activity Lifecycle Logger"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/tvLifecycleLog"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            android:background="#F4F6F9"
+            android:padding="12dp"
+            android:gravity="top"
+            android:text="Lifecycle trace ready..."
+            android:textSize="13sp"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/btnClearLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Clear Log" />
+
+        <Button
+            android:id="@+id/btnSimulateTick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Check-In Heartbeat" />
+
+    </LinearLayout>
+
+</ScrollView>
